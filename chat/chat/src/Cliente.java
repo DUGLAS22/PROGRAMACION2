@@ -1,6 +1,6 @@
 
-//import com.sun.awt.AWTUtilities;
-//import java.awt.Shape;
+import com.sun.awt.AWTUtilities;
+import java.awt.Shape;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.awt.geom.RoundRectangle2D;
@@ -14,7 +14,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.UnknownHostException;
 import java.util.ArrayList;
-//import java.util.HashMap;
+import java.util.HashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
@@ -44,7 +44,7 @@ public class Cliente extends javax.swing.JFrame implements Runnable{
         try {
             String nombre2 = JOptionPane.showInputDialog("nombre: ");
             System.out.println("print 1");
-            Socket misocket = new Socket("192.168.1.37",1024);
+            Socket misocket = new Socket("192.168.1.38",1024);
             System.out.println("print 1");
             ServerSocket auxiliar = new ServerSocket(0);
             int puertoDisponible=auxiliar.getLocalPort();
@@ -213,7 +213,8 @@ private int yy;
     private void enviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enviarActionPerformed
 
         try {                //nuestra ip del servidor y el puerto que va a estar abierto
-            Socket miSocket =new Socket("192.168.1.37",1024);
+           //Socket socket = new socket
+            Socket miSocket =new Socket("192.168.1.38",1024);
             Paquete1 datos = new Paquete1();
             datos.setNick2(nick.getText());
             datos.setDestinatario(ipdestino.getSelectedItem().toString());
@@ -423,7 +424,8 @@ class EnvioOnline extends WindowAdapter{ //implementa todas los metodos pertenec
             //ip del server
             
             System.out.println("print 1");
-            Socket misocket = new Socket("192.168.43.104",1024);
+            //Socket misocket = new Socket("192.168.43.104",1024);
+            Socket misocket = new Socket("192.168.1.38",1024);
             System.out.println("print 1");
             Paquete1 datos = new Paquete1();
             

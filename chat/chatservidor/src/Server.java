@@ -162,7 +162,7 @@ ArrayList<Controles> lista2=new ArrayList<Controles>();
             ServerSocket servidor = new ServerSocket(1024); // que esté a la escucha y abra ese puerto
             String nick,mensaje2,ip;
             ArrayList <String> listaIp4 = new ArrayList<String>();  //arrayList que alamcenará las ip conectadas
-        
+             System.out.println("SERVIDOR INICIADO");
             Paquete1 paquete_recibido;
               Controles aux = new Controles();
                     
